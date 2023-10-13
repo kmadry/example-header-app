@@ -40,7 +40,7 @@ module.exports = {
             filename: "remoteEntry.js",  // output a js file
             exposes: { // which exposes
                 "./Header": "./src/App",  // a module 'Header' from './src/App'
-                "./Footer": "./src/footer",
+                "./Footer": "./src/components/footer",
             },
             shared: {  // and shared
               ...dependencies,  // some other dependencies
@@ -51,6 +51,9 @@ module.exports = {
               "react-dom": { // react-dom
                 singleton: true,
                 requiredVersion: dependencies["react-dom"],
+              },
+              'react-router-dom': {
+                singleton: true,
               },
             },
         }),
